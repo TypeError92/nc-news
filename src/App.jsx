@@ -1,12 +1,18 @@
 import { useState } from 'react'
+import {Header, Footer} from './components'
+import Main from './components/Main'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  console.log(Footer)
+  
 
   return (
-    <>
-    </>
+    <div className='App'>
+      <Header id='header'/>
+      <Main id='main'/>
+      <Footer id='footer'/>
+    </div>
   )
 }
 
