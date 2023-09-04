@@ -3,7 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import SingleArticleView from './SingleArticleView'
 
 function Main(){
-    <Routes>
+    return (
+        <>
+        <h1>Main</h1>
+        <Routes>
         {/* ROUTES USING LAYOUT 1 */}
         <Route path="/" element={<ArticleList/>}/>
         <Route path="/home" element={<ArticleList/>}/>
@@ -14,7 +17,9 @@ function Main(){
         {/* ROUTES USING LAYOUT 2 */}
         <Route path="/articles/article_id" element={<SingleArticleView/>}/>
     </Routes>
-    return 
+        </>
+    )
 }
+
 
 export default Main

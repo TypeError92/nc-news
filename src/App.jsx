@@ -1,18 +1,16 @@
 import { useState } from 'react'
-import {Header, Footer} from './components'
-import Main from './components/Main'
+import Header from './components/Header'
+import Main from './components/Main/Main'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
-  console.log(Footer)
-  
-
   return (
-    <div className='App'>
+    <>
       <Header id='header'/>
       <Main id='main'/>
       <Footer id='footer'/>
-    </div>
+    </>
   )
 }
 

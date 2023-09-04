@@ -1,5 +1,7 @@
 function ArticleList(){
-    return
+    return (
+        <></>
+    )
 }
 
 export default ArticleList

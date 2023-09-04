@@ -1,5 +1,7 @@
 function SingleArticleView(){
-    return
+    return (
+        <></>
+    )
 }
 
 export default SingleArticleView
