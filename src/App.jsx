@@ -7,9 +7,9 @@ import './App.css'
 function App() {
   return (
     <>
-      <Header id='header'/>
-      <Main id='main'/>
-      <Footer id='footer'/>
+      <Header/>
+      <Main/>
+      <Footer/>
     </>
   )
 }

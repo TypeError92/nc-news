@@ -4,7 +4,7 @@ import SingleArticleView from './SingleArticleView'
 
 function Main(){
     return (
-        <>
+        <div id='main'>
         <h1>Main</h1>
         <Routes>
         {/* ROUTES USING LAYOUT 1 */}
@@ -17,7 +17,7 @@ function Main(){
         {/* ROUTES USING LAYOUT 2 */}
         <Route path="/articles/article_id" element={<SingleArticleView/>}/>
     </Routes>
-        </>
+        </div>
     )
 }
 
