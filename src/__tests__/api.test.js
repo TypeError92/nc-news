@@ -1,4 +1,4 @@
-const {fetchArticles} = require('../fetchArticles')
+const {fetchArticles} = require('../api')
 
 describe('fetchArticles', () => {
     test('200: returns a list of article objects', () => {

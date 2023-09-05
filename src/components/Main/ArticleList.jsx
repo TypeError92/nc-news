@@ -1,5 +1,5 @@
 import ArticlePreview from './ArticlePreview';
-import fetchArticles from '../../api/fetchArticles'
+import fetchArticles from '../../api'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
