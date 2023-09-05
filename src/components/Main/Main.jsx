@@ -1,8 +1,8 @@
-import ArticleList from './ArticleList'
+import {ArticleList} from './ArticleList'
 import { Routes, Route } from 'react-router-dom';
-import ArticleView from './ArticleView'
+import {ArticleView} from './ArticleView'
 
-function Main(){
+export function Main(){
     return (
         <div id='main'>
         <h1>Main</h1>
@@ -15,11 +15,8 @@ function Main(){
         <Route path="/articles/authors/:author_id" element={<ArticleList filter={"author"}/>}/>
 
         {/* ROUTES USING LAYOUT 2 */}
-        <Route path="/articles/article_id" element={<ArticleView/>}/>
+        <Route path="/articles/id/:article_id" element={<ArticleView/>}/>
     </Routes>
         </div>
     )
 }
-
-
-export default Main

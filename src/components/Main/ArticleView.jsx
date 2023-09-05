@@ -1,14 +1,17 @@
-import fetchArticle from "../../api"
+import {fetchArticle} from "../../api"
+import {useEffect, useState} from 'react'
+import {useParams} from 'react-router-dom'
 
-function ArticleView(){
+export function ArticleView(){
+    const {article_id} = useParams()
     const [article, setArticle] = useState({})
     const [isLoading, setIsLoading] = useState(false)
     useEffect(() => {
+        console.log('Fetching...')
         setIsLoading(true)
-        fetchArticle().then(({data}) => {
+        fetchArticle(article_id).then(({data}) => {
             setIsLoading(false)
             setArticle(data.article)
-            console.log(data.article)
         })
         
     }, [])
@@ -25,5 +28,3 @@ function ArticleView(){
     }
 
 }
-
-export default ArticleView

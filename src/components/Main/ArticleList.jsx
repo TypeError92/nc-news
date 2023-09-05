@@ -1,10 +1,9 @@
-import ArticlePreview from './ArticlePreview';
-import fetchArticles from '../../api'
+import {ArticlePreview} from './ArticlePreview';
+import {fetchArticles} from '../../api'
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 
 
-function ArticleList({filter}){
+export function ArticleList({filter}){
     const [articles, setArticles] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     useEffect(() => {
@@ -28,5 +27,3 @@ function ArticleList({filter}){
         )
     }
 }
-
-export default ArticleList
