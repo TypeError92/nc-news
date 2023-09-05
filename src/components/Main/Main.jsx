@@ -1,6 +1,6 @@
 import ArticleList from './ArticleList'
 import { Routes, Route } from 'react-router-dom';
-import SingleArticleView from './SingleArticleView'
+import ArticleView from './ArticleView'
 
 function Main(){
     return (
@@ -15,7 +15,7 @@ function Main(){
         <Route path="/articles/authors/:author_id" element={<ArticleList filter={"author"}/>}/>
 
         {/* ROUTES USING LAYOUT 2 */}
-        <Route path="/articles/article_id" element={<SingleArticleView/>}/>
+        <Route path="/articles/article_id" element={<ArticleView/>}/>
     </Routes>
         </div>
     )

@@ -5,4 +5,8 @@ function fetchArticles(){
     return api.get('/articles')
 }
 
+function fetchArticle(article_id){
+    return api.get(`articles/${article_id}`)
+}
+
 export default fetchArticles
