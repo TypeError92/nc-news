@@ -1,3 +1,12 @@
+.article-list {
+    list-style: none;
+}
+
+.article-preview {
+    border: solid green 2px
+}
+
+
 #header {
     border: solid red 2px
 }
