@@ -1,9 +1,25 @@
+
+.accordion-title {
+    border: solid blue 2px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .article-list {
     list-style: none;
 }
 
 .article-preview {
     border: solid green 2px
+}
+
+.comment-list {
+    list-style: none;
+    padding: .25em
+}
+
+.comment-card {
+    border: solid blue 1px
 }
 
 
