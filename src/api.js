@@ -8,3 +8,7 @@ export function fetchArticles(){
 export function fetchArticle(article_id){
     return api.get(`articles/${article_id}`)
 }
+
+export function fetchComments(article_id){
+    return api.get(`articles/${article_id}/comments`)
+}

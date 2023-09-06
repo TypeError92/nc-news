@@ -1,3 +1,4 @@
+import { CommentSection } from './comments/CommentSection';
 import {fetchArticle} from "../../api"
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
@@ -19,7 +20,6 @@ export function ArticleView(){
         return <p>Loading...</p>
     } else {
         const date = new Date(article.created_at).toDateString()
-        console.log(date)
 
         return (
             <div id='article-view'>
@@ -29,6 +29,7 @@ export function ArticleView(){
                 <h3>{date}</h3>
                 <h2>by {article.author}</h2>
                 <p>{article.body}</p>
+                <CommentSection article_id={article.article_id}/>
             </div>
         )
     }
