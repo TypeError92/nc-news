@@ -1,4 +1,4 @@
-function Footer(){
+export function Footer(){
     return (
         <div id='footer'>
             <h1>Footer</h1>
@@ -6,4 +6,3 @@ function Footer(){
     )
 }
 
-export default Footer

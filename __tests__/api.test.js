@@ -1,8 +1,8 @@
-const {fetchArticles} = require('../fetchArticles')
+import {fetchArticles} from '../src/api'
 
 describe('fetchArticles', () => {
     test('200: returns a list of article objects', () => {
-        const articles = fetchArticles().then(({data}) => {
+        fetchArticles().then(({data}) => {
             const articles = data.articles;
             articles.forEach((article) => {
             expect(Object.keys(article)).toEqual([
