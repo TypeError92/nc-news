@@ -10,7 +10,6 @@ export function CommentList({ article_id }) {
     fetchComments(article_id).then(({ data }) => {
       setIsLoading(false);
       setComments(data.comments);
-      console.log(data)
     });
   }, []);
 
