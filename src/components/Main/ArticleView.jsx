@@ -32,8 +32,8 @@ export function ArticleView() {
         <p>{article.body}</p>
         <div className='article-votes'>
             <VoteCounter articleVotes={articleVotes}/>
-            <UpVoteButton article_id={article.article_id} setArticleVotes={setArticleVotes} />
-            <DownVoteButton article_id={article.article_id} setArticleVotes={setArticleVotes} />
+            <VoteButton article_id={article.article_id} setArticleVotes={setArticleVotes} inc_votes={1}/>
+            <VoteButton article_id={article.article_id} setArticleVotes={setArticleVotes} inc_votes={-1}/>
         </div>
         
         <CommentSection article_id={article.article_id} />
@@ -46,25 +46,15 @@ function VoteCounter({articleVotes}){
     return <h4>Votes: {articleVotes}</h4>
 }
 
-function UpVoteButton({ article_id, articleVotes, setArticleVotes }) {
+function VoteButton({ article_id, setArticleVotes, inc_votes}) {
   const onClick = () => {
-    setArticleVotes((current) => current + 1);
-    incArticleVote(article_id, 1).catch((err) => {
-        setArticleVotes((current) => current - 1);
+    setArticleVotes((current) => current + inc_votes);
+    incArticleVote(article_id, inc_votes).catch((err) => {
+        setArticleVotes((current) => current - inc_votes);
         console.log(err)
         alert('Your vote could not be logged - please try again later!')
     });
   };
-  return <button className='vote-button' onClick={onClick}>+1</button>;
+  return <button className='vote-button' onClick={onClick}>{inc_votes > 0 ? '+' : '-'}</button>;
 }
 
-function DownVoteButton({ article_id, articleVotes, setArticleVotes }) {
-    const onClick = () => {
-      setArticleVotes((current) => current - 1);
-      incArticleVote(article_id, -1).catch((err) => {
-          setArticleVotes((current) => current + 1);
-          alert('Your vote could not be logged - please try again later!')
-      });
-    };
-    return <button className='vote-button' onClick={onClick}>-1</button>;
-  }
