@@ -1,6 +1,6 @@
 export function CommentCard({comment}){
     return (
-    <li class="comment-card">
+    <li className="comment-card">
         <div className="comment-header">
             <h4>{comment.author}</h4>
             <h4>{new Date(comment.created_at).toDateString()}</h4>
