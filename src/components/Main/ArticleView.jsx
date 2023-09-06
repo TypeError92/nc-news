@@ -7,7 +7,6 @@ export function ArticleView(){
     const [article, setArticle] = useState({})
     const [isLoading, setIsLoading] = useState(false)
     useEffect(() => {
-        console.log('Fetching...')
         setIsLoading(true)
         fetchArticle(article_id).then(({data}) => {
             setIsLoading(false)
@@ -19,10 +18,17 @@ export function ArticleView(){
     if (isLoading){
         return <p>Loading...</p>
     } else {
+        const date = new Date(article.created_at).toDateString()
+        console.log(date)
+
         return (
             <div id='article-view'>
                 <img src={article.article_img_url} alt={article.title}/>
                 <h1>{article.title}</h1>
+                <h2>#{article.topic}</h2>
+                <h3>{date}</h3>
+                <h2>by {article.author}</h2>
+                <p>{article.body}</p>
             </div>
         )
     }
