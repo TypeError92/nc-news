@@ -51,8 +51,8 @@ function UpVoteButton({ article_id, articleVotes, setArticleVotes }) {
     setArticleVotes((current) => current + 1);
     incArticleVote(article_id, 1).catch((err) => {
         setArticleVotes((current) => current - 1);
-        // Enter more elaborate error handling here...
-        console.log('Oops...')
+        console.log(err)
+        alert('Your vote could not be logged - please try again later!')
     });
   };
   return <button className='vote-button' onClick={onClick}>+1</button>;
@@ -63,8 +63,7 @@ function DownVoteButton({ article_id, articleVotes, setArticleVotes }) {
       setArticleVotes((current) => current - 1);
       incArticleVote(article_id, -1).catch((err) => {
           setArticleVotes((current) => current + 1);
-          // Enter more elaborate error handling here...
-          console.log('Oops...')
+          alert('Your vote could not be logged - please try again later!')
       });
     };
     return <button className='vote-button' onClick={onClick}>-1</button>;
