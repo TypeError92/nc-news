@@ -51,7 +51,6 @@ function UpVoteButton({ article_id, articleVotes, setArticleVotes }) {
     setArticleVotes((current) => current + 1);
     incArticleVote(article_id, 1).catch((err) => {
         setArticleVotes((current) => current - 1);
-        console.log(err)
         alert('Your vote could not be logged - please try again later!')
     });
   };
