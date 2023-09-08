@@ -6,7 +6,7 @@ export function incArticleVote(article_id, inc_votes){
 }
 
 export function fetchArticles(){
-    return api.get('/articles')
+    return api.get('articles')
 }
 
 export function fetchArticle(article_id){
@@ -15,4 +15,12 @@ export function fetchArticle(article_id){
 
 export function fetchComments(article_id){
     return api.get(`articles/${article_id}/comments`)
+}
+
+export function fetchTopics(){
+    return api.get('topics')
+}
+
+export function postComment(article_id, username, body){
+    return api.post(`articles/${article_id}/comments`, {username, body})
 }
