@@ -5,8 +5,8 @@ export function incArticleVote(article_id, inc_votes){
     return api.patch(`articles/${article_id}`, {inc_votes})
 }
 
-export function fetchArticles(){
-    return api.get('articles')
+export function fetchArticles(sort_by, order, topic){
+    return api.get(`articles?sort_by=${sort_by}&order=${order}${topic ? `&topic=${topic}` : ''}`)
 }
 
 export function fetchArticle(article_id){
