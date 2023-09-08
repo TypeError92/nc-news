@@ -16,3 +16,7 @@ export function fetchArticle(article_id){
 export function fetchComments(article_id){
     return api.get(`articles/${article_id}/comments`)
 }
+
+export function postComment(article_id, username, body){
+    return api.post(`articles/${article_id}/comments`, {username, body})
+}
