@@ -28,7 +28,7 @@ export function NewCommentForm({ comments, isPosting, setComments, setIsPosting}
   return (
     <li>
       <form className="comment-card" id="new-comment-form" onSubmit={onSubmit}>
-        <input
+        <textarea
           id="new-comment-input"
           onChange={({ target }) => setNewCommentBody(target.value)}
           placeholder={

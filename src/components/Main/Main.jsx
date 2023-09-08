@@ -11,12 +11,12 @@ export function Main() {
         <Route path="/home" element={<ArticleList filter={null} />} />
         <Route path="/articles" element={<ArticleList filter={null} />} />
         <Route
-          path="/articles/topics/:topic_id"
+          path="/articles/topics/:topic"
           element={<ArticleList filter={'topic'} />}
         />
         <Route
           path="/articles/authors/:author_id"
-          element={<ArticleList filter={'author'} />}
+          element={<ArticleList filter={'author_id'} />}
         />
 
         {/* ROUTES USING LAYOUT 2 */}
