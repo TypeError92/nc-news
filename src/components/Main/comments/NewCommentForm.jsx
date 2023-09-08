@@ -30,7 +30,6 @@ export function NewCommentForm({ comments, isPosting, setComments, setIsPosting}
       <form className="comment-card" id="new-comment-form" onSubmit={onSubmit}>
         <textarea
           id="new-comment-input"
-          multi
           onChange={({ target }) => setNewCommentBody(target.value)}
           placeholder={
             comments.length ? 'Write something!' : 'Be the first to comment!'

@@ -49,9 +49,9 @@ function VoteCounter({articleVotes}){
 function VoteButton({ article_id, setArticleVotes, inc_votes}) {
   const onClick = () => {
     setArticleVotes((current) => current + inc_votes);
-    incArticleVote(article_id, inc_votes).catch((err) => {
+    incArticleVote(article_id, inc_votes).
+    catch((err) => {
         setArticleVotes((current) => current - inc_votes);
-        console.log(err)
         alert('Your vote could not be logged - please try again later!')
     });
   };
