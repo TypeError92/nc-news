@@ -7,16 +7,16 @@ export function Main() {
     <div id="main">
       <Routes>
         {/* ROUTES USING LAYOUT 1 */}
-        <Route path="/" element={<ArticleList filter={null} />} />
-        <Route path="/home" element={<ArticleList filter={null} />} />
-        <Route path="/articles" element={<ArticleList filter={null} />} />
+        <Route path="/" element={<ArticleList topic={null} />} />
+        <Route path="/home" element={<ArticleList topic={null} />} />
+        <Route path="/articles" element={<ArticleList topic={null} />} />
         <Route
           path="/articles/topics/:topic"
-          element={<ArticleList filter={'topic'} />}
+          element={<ArticleList topic={'topic'} />}
         />
         <Route
           path="/articles/authors/:author_id"
-          element={<ArticleList filter={'author_id'} />}
+          element={<ArticleList topic={'author_id'} />}
         />
 
         {/* ROUTES USING LAYOUT 2 */}
